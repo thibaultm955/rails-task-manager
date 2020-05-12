@@ -1,0 +1,8 @@
+<h1> <%=@task.title%> </h1>
+<p> <%= @task.details%> </p>
+<p><%= check_box_tag 'task_ids[]', "1", checked = @task.completed-%> <%= @task.completed == true ? " This task is completed" : " This task is not compelted"%> </p>
+<a href="../tasks">Back to list</a>
+
+<form action="<%=params[:id]%>/edit">
+  <input type="submit" value="Edit">
+</form> 
